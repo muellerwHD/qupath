@@ -25,7 +25,7 @@ gradle.extra["qupath.app.name"] = "QuPath"
 // Default is to use 50% of available RAM
 gradle.extra["qupath.jvm.args"] = listOf(
     providers.gradleProperty("qupath.jvm.args")
-        .getOrElse("-XX:MaxRAMPercentage=50"))
+        .getOrElse("-XX:MaxRAMPercentage=100"))
 
 // By default, create an image with jpackage (not an installer, which is slower)
 gradle.extra["qupath.package"] = providers.gradleProperty("package").getOrElse("image")

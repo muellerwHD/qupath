@@ -1,0 +1,877 @@
+> Task :buildSrc:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :buildSrc:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :buildSrc:extractPluginRequests NO-SOURCE
+> Task :buildSrc:generatePluginAdapters NO-SOURCE
+> Task :buildSrc:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :buildSrc:compilePluginsBlocks UP-TO-DATE
+> Task :buildSrc:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :buildSrc:generateScriptPluginAdapters UP-TO-DATE
+> Task :buildSrc:compileKotlin UP-TO-DATE
+> Task :buildSrc:compileJava UP-TO-DATE
+> Task :buildSrc:compileGroovy NO-SOURCE
+> Task :buildSrc:compileGroovyPlugins NO-SOURCE
+> Task :buildSrc:pluginDescriptors UP-TO-DATE
+> Task :buildSrc:processResources UP-TO-DATE
+> Task :buildSrc:classes UP-TO-DATE
+> Task :buildSrc:jar UP-TO-DATE
+> Task :qupath-core:compileJava UP-TO-DATE
+> Task :qupath-core-processing:compileJava UP-TO-DATE
+> Task :qupath-gui-fx:compileJava UP-TO-DATE
+> Task :qupath-app:compileJava UP-TO-DATE
+> Task :qupath-app:processResources NO-SOURCE
+> Task :qupath-app:classes UP-TO-DATE
+> Task :qupath-app:javadoc UP-TO-DATE
+> Task :qupath-app:javadocJar UP-TO-DATE
+> Task :qupath-core:processResources UP-TO-DATE
+> Task :qupath-core:classes UP-TO-DATE
+> Task :qupath-core:javadoc UP-TO-DATE
+> Task :qupath-core:javadocJar UP-TO-DATE
+> Task :qupath-core-processing:processResources UP-TO-DATE
+> Task :qupath-core-processing:classes UP-TO-DATE
+> Task :qupath-core-processing:javadoc UP-TO-DATE
+> Task :qupath-core-processing:javadocJar UP-TO-DATE
+
+> Task :qupath-extension-bioformats:compileJava FAILED
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/ConvertCommand.java:33: error: package org.apache.commons.io does not exist
+import org.apache.commons.io.FileUtils;
+                            ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:55: error: package loci.formats.out does not exist
+import loci.formats.out.OMETiffWriter;
+                       ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:56: error: package loci.formats.out does not exist
+import loci.formats.out.PyramidOMETiffWriter;
+                       ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:57: error: package loci.formats.out does not exist
+import loci.formats.out.TiffWriter;
+                       ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:58: error: package loci.formats.tiff does not exist
+import loci.formats.tiff.IFD;
+                        ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:59: error: package ome.units does not exist
+import ome.units.UNITS;
+                ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:60: error: package ome.units.quantity does not exist
+import ome.units.quantity.Length;
+                         ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:61: error: package ome.xml.model.enums does not exist
+import ome.xml.model.enums.DimensionOrder;
+                          ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:62: error: package ome.xml.model.primitives does not exist
+import ome.xml.model.primitives.Color;
+                               ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:63: error: package ome.xml.model.primitives does not exist
+import ome.xml.model.primitives.PositiveInteger;
+                               ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:584: error: cannot find symbol
+		public void writePyramid(final PyramidOMETiffWriter writer, IMetadata meta, final int series) throws FormatException, IOException {
+		                               ^
+  symbol:   class PyramidOMETiffWriter
+  location: class OMEPyramidSeries
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:899: error: cannot find symbol
+		private void writeRegion(IFormatWriter writer, int plane, IFD ifd, ImageServer<BufferedImage> server, TileRequest tile, boolean isRGB, int[] channels) throws FormatException, IOException {
+		                                                          ^
+  symbol:   class IFD
+  location: class OMEPyramidSeries
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:3: error: package ome.units does not exist
+import ome.units.UNITS;
+                ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:4: error: package ome.units.quantity does not exist
+import ome.units.quantity.Length;
+                         ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:5: error: package ome.units.quantity does not exist
+import ome.units.quantity.Time;
+                         ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:6: error: package ome.xml.model does not exist
+import ome.xml.model.Channel;
+                    ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:7: error: package ome.xml.model does not exist
+import ome.xml.model.Image;
+                    ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:8: error: package ome.xml.model does not exist
+import ome.xml.model.Instrument;
+                    ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:9: error: package ome.xml.model does not exist
+import ome.xml.model.OME;
+                    ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:10: error: package ome.xml.model does not exist
+import ome.xml.model.Objective;
+                    ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:11: error: package ome.xml.model does not exist
+import ome.xml.model.ObjectiveSettings;
+                    ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:12: error: package ome.xml.model does not exist
+import ome.xml.model.Pixels;
+                    ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:13: error: package ome.xml.model.enums does not exist
+import ome.xml.model.enums.DimensionOrder;
+                          ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:14: error: package ome.xml.model.enums does not exist
+import ome.xml.model.enums.PixelType;
+                          ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:15: error: package ome.xml.model.primitives does not exist
+import ome.xml.model.primitives.Color;
+                               ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:16: error: package ome.xml.model.primitives does not exist
+import ome.xml.model.primitives.PositiveInteger;
+                               ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:88: error: cannot find symbol
+    private static Instrument createInstrument(double magnification) {
+                   ^
+  symbol:   class Instrument
+  location: class OMEXMLCreator
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:97: error: cannot find symbol
+    private static Image createImage(ImageServerMetadata metadata, Instrument instrument) {
+                                                                   ^
+  symbol:   class Instrument
+  location: class OMEXMLCreator
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:97: error: cannot find symbol
+    private static Image createImage(ImageServerMetadata metadata, Instrument instrument) {
+                   ^
+  symbol:   class Image
+  location: class OMEXMLCreator
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:114: error: cannot find symbol
+    private static Objective createObjective(double magnification) {
+                   ^
+  symbol:   class Objective
+  location: class OMEXMLCreator
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:123: error: cannot find symbol
+    private static Pixels createPixels(ImageServerMetadata metadata) {
+                   ^
+  symbol:   class Pixels
+  location: class OMEXMLCreator
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:187: error: cannot find symbol
+    private static Channel createChannel(ImageServerMetadata metadata, ImageChannel imageChannel) {
+                   ^
+  symbol:   class Channel
+  location: class OMEXMLCreator
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEZarrWriter.java:10: error: package loci.formats.gui does not exist
+import loci.formats.gui.AWTImageTools;
+                       ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMETiffWriter.java:31: error: package loci.common does not exist
+import loci.common.ByteArrayHandle;
+                  ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMETiffWriter.java:32: error: package loci.common does not exist
+import loci.common.IRandomAccess;
+                  ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMETiffWriter.java:33: error: package loci.common does not exist
+import loci.common.Location;
+                  ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMETiffWriter.java:125: error: cannot find symbol
+	private String createInMemoryID(IRandomAccess access) {
+	                                ^
+  symbol:   class IRandomAccess
+  location: class OMETiffWriter
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:26: error: package loci.common.services does not exist
+import loci.common.services.DependencyException;
+                           ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:27: error: package loci.common.services does not exist
+import loci.common.services.ServiceException;
+                           ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:29: error: cannot find symbol
+import loci.formats.DimensionSwapper;
+                   ^
+  symbol:   class DimensionSwapper
+  location: package loci.formats
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:34: error: cannot find symbol
+import loci.formats.Memoizer;
+                   ^
+  symbol:   class Memoizer
+  location: package loci.formats
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:37: error: package loci.formats.gui does not exist
+import loci.formats.gui.AWTImageTools;
+                       ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:45: error: package ome.units does not exist
+import ome.units.UNITS;
+                ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:46: error: package ome.units.quantity does not exist
+import ome.units.quantity.Length;
+                         ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:235: error: cannot find symbol
+	public BioFormatsImageServer(final URI uri, String...args) throws FormatException, IOException, DependencyException, ServiceException, URISyntaxException {
+	                                                                                                ^
+  symbol:   class DependencyException
+  location: class BioFormatsImageServer
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:235: error: cannot find symbol
+	public BioFormatsImageServer(final URI uri, String...args) throws FormatException, IOException, DependencyException, ServiceException, URISyntaxException {
+	                                                                                                                     ^
+  symbol:   class ServiceException
+  location: class BioFormatsImageServer
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:269: error: cannot find symbol
+	BioFormatsImageServer(URI uri, final BioFormatsServerOptions options, String...args) throws FormatException, IOException, DependencyException, ServiceException, URISyntaxException {
+	                                                                                                                          ^
+  symbol:   class DependencyException
+  location: class BioFormatsImageServer
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:269: error: cannot find symbol
+	BioFormatsImageServer(URI uri, final BioFormatsServerOptions options, String...args) throws FormatException, IOException, DependencyException, ServiceException, URISyntaxException {
+	                                                                                                                                               ^
+  symbol:   class ServiceException
+  location: class BioFormatsImageServer
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/OMEPixelParser.java:27: error: package loci.common does not exist
+import loci.common.DataTools;
+                  ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/ConvertCommand.java:190: error: cannot find symbol
+					FileUtils.deleteDirectory(outputFile);
+					^
+  symbol:   variable FileUtils
+  location: class ConvertCommand
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:141: error: cannot find symbol
+				return OMETiffWriter.COMPRESSION_J2K;
+				                    ^
+  symbol:   variable COMPRESSION_J2K
+  location: class OMETiffWriter
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:143: error: cannot find symbol
+				return OMETiffWriter.COMPRESSION_J2K_LOSSY;
+				                    ^
+  symbol:   variable COMPRESSION_J2K_LOSSY
+  location: class OMETiffWriter
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:145: error: cannot find symbol
+				return OMETiffWriter.COMPRESSION_JPEG;
+				                    ^
+  symbol:   variable COMPRESSION_JPEG
+  location: class OMETiffWriter
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:147: error: cannot find symbol
+				return OMETiffWriter.COMPRESSION_UNCOMPRESSED;
+				                    ^
+  symbol:   variable COMPRESSION_UNCOMPRESSED
+  location: class OMETiffWriter
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:149: error: cannot find symbol
+				return OMETiffWriter.COMPRESSION_LZW;
+				                    ^
+  symbol:   variable COMPRESSION_LZW
+  location: class OMETiffWriter
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:151: error: cannot find symbol
+				return OMETiffWriter.COMPRESSION_ZLIB;
+				                    ^
+  symbol:   variable COMPRESSION_ZLIB
+  location: class OMETiffWriter
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:155: error: cannot find symbol
+					return OMETiffWriter.COMPRESSION_JPEG;
+					                    ^
+  symbol:   variable COMPRESSION_JPEG
+  location: class OMETiffWriter
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:158: error: cannot find symbol
+					return OMETiffWriter.COMPRESSION_LZW;
+					                    ^
+  symbol:   variable COMPRESSION_LZW
+  location: class OMETiffWriter
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:160: error: cannot find symbol
+					return OMETiffWriter.COMPRESSION_ZLIB;
+					                    ^
+  symbol:   variable COMPRESSION_ZLIB
+  location: class OMETiffWriter
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:322: error: cannot access IMetadata
+			writer.setMetadataRetrieve(meta);
+			      ^
+  class file for ome.xml.meta.IMetadata not found
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:326: error: cannot find symbol
+			if (wrappedWriter instanceof TiffWriter tiffWriter) {
+			                             ^
+  symbol:   class TiffWriter
+  location: class OMEPyramidWriter
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:392: error: cannot access MetadataStore
+			meta.setImageID("Image:"+series, series);
+			    ^
+  class file for ome.xml.meta.MetadataStore not found
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:393: error: cannot access MetadataRetrieve
+			meta.setPixelsID("Pixels:"+series, series);
+			    ^
+  class file for ome.xml.meta.MetadataRetrieve not found
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:395: error: cannot find symbol
+				meta.setImageName(name, series);
+				    ^
+  symbol:   method setImageName(String,int)
+  location: variable meta of type IMetadata
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:397: error: cannot find symbol
+			meta.setPixelsBigEndian(ByteOrder.BIG_ENDIAN.equals(endian), series);
+			    ^
+  symbol:   method setPixelsBigEndian(boolean,int)
+  location: variable meta of type IMetadata
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:399: error: cannot find symbol
+			meta.setPixelsDimensionOrder(DimensionOrder.XYCZT, series);
+			                             ^
+  symbol:   variable DimensionOrder
+  location: class OMEPyramidSeries
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:403: error: package ome.xml.model.enums does not exist
+				meta.setPixelsType(ome.xml.model.enums.PixelType.INT8, series);
+				                                      ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:406: error: package ome.xml.model.enums does not exist
+				meta.setPixelsType(ome.xml.model.enums.PixelType.UINT8, series);
+				                                      ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:409: error: package ome.xml.model.enums does not exist
+				meta.setPixelsType(ome.xml.model.enums.PixelType.INT16, series);
+				                                      ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:412: error: package ome.xml.model.enums does not exist
+				meta.setPixelsType(ome.xml.model.enums.PixelType.UINT16, series);
+				                                      ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:415: error: package ome.xml.model.enums does not exist
+				meta.setPixelsType(ome.xml.model.enums.PixelType.INT32, series);
+				                                      ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:418: error: package ome.xml.model.enums does not exist
+				meta.setPixelsType(ome.xml.model.enums.PixelType.UINT32, series);
+				                                      ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:421: error: package ome.xml.model.enums does not exist
+				meta.setPixelsType(ome.xml.model.enums.PixelType.FLOAT, series);
+				                                      ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:424: error: package ome.xml.model.enums does not exist
+				meta.setPixelsType(ome.xml.model.enums.PixelType.DOUBLE, series);
+				                                      ^
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:429: error: cannot find symbol
+			meta.setPixelsSizeX(new PositiveInteger((int)(width / downsamples[0])), series);
+			                        ^
+  symbol:   class PositiveInteger
+  location: class OMEPyramidSeries
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:430: error: cannot find symbol
+			meta.setPixelsSizeY(new PositiveInteger((int)(height / downsamples[0])), series);
+			                        ^
+  symbol:   class PositiveInteger
+  location: class OMEPyramidSeries
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:439: error: cannot find symbol
+			meta.setPixelsSizeZ(new PositiveInteger(sizeZ), series);
+			                        ^
+  symbol:   class PositiveInteger
+  location: class OMEPyramidSeries
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:440: error: cannot find symbol
+			meta.setPixelsSizeT(new PositiveInteger(sizeT), series);
+			                        ^
+  symbol:   class PositiveInteger
+  location: class OMEPyramidSeries
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:475: error: cannot find symbol
+			meta.setPixelsSizeC(new PositiveInteger(nChannels), series);
+			                        ^
+  symbol:   class PositiveInteger
+  location: class OMEPyramidSeries
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:477: error: cannot find symbol
+				meta.setChannelID("Channel:0", series, 0);			
+				    ^
+  symbol:   method setChannelID(String,int,int)
+  location: variable meta of type IMetadata
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:478: error: cannot find symbol
+				meta.setPixelsInterleaved(isInterleaved, series);
+				    ^
+  symbol:   method setPixelsInterleaved(boolean,int)
+  location: variable meta of type IMetadata
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:479: error: cannot find symbol
+				meta.setChannelSamplesPerPixel(new PositiveInteger(nSamples), series, 0);	
+				                                   ^
+  symbol:   class PositiveInteger
+  location: class OMEPyramidSeries
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:481: error: cannot find symbol
+				meta.setChannelSamplesPerPixel(new PositiveInteger(nSamples), series, 0);
+				                                   ^
+  symbol:   class PositiveInteger
+  location: class OMEPyramidSeries
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:482: error: cannot find symbol
+				meta.setPixelsInterleaved(isInterleaved, series);
+				    ^
+  symbol:   method setPixelsInterleaved(boolean,int)
+  location: variable meta of type IMetadata
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:484: error: cannot find symbol
+					meta.setChannelID("Channel:0:" + c, series, c);			
+					    ^
+  symbol:   method setChannelID(String,int,int)
+  location: variable meta of type IMetadata
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:489: error: cannot find symbol
+					meta.setChannelColor(new Color(
+					                         ^
+  symbol:   class Color
+  location: class OMEPyramidSeries
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:495: error: cannot find symbol
+					meta.setChannelName(channel.getName(), series, c);
+					    ^
+  symbol:   method setChannelName(String,int,int)
+  location: variable meta of type IMetadata
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:502: error: cannot find symbol
+				meta.setPixelsPhysicalSizeX(new Length(cal.getPixelWidthMicrons() * downsamples[0], UNITS.MICROMETER), series);
+				                                ^
+  symbol:   class Length
+  location: class OMEPyramidSeries
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:502: error: cannot find symbol
+				meta.setPixelsPhysicalSizeX(new Length(cal.getPixelWidthMicrons() * downsamples[0], UNITS.MICROMETER), series);
+				                                                                                    ^
+  symbol:   variable UNITS
+  location: class OMEPyramidSeries
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:503: error: cannot find symbol
+				meta.setPixelsPhysicalSizeY(new Length(cal.getPixelHeightMicrons() * downsamples[0], UNITS.MICROMETER), series);
+				                                ^
+  symbol:   class Length
+  location: class OMEPyramidSeries
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:503: error: cannot find symbol
+				meta.setPixelsPhysicalSizeY(new Length(cal.getPixelHeightMicrons() * downsamples[0], UNITS.MICROMETER), series);
+				                                                                                     ^
+  symbol:   variable UNITS
+  location: class OMEPyramidSeries
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:506: error: cannot find symbol
+				meta.setPixelsPhysicalSizeZ(new Length(cal.getZSpacingMicrons(), UNITS.MICROMETER), series);
+				                                ^
+  symbol:   class Length
+  location: class OMEPyramidSeries
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:506: error: cannot find symbol
+				meta.setPixelsPhysicalSizeZ(new Length(cal.getZSpacingMicrons(), UNITS.MICROMETER), series);
+				                                                                 ^
+  symbol:   variable UNITS
+  location: class OMEPyramidSeries
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:528: error: cannot find symbol
+				((IPyramidStore)meta).setResolutionSizeX(new PositiveInteger(w), series, level);
+				                                             ^
+  symbol:   class PositiveInteger
+  location: class OMEPyramidSeries
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:529: error: cannot find symbol
+				((IPyramidStore)meta).setResolutionSizeY(new PositiveInteger(h), series, level);
+				                                             ^
+  symbol:   class PositiveInteger
+  location: class OMEPyramidSeries
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:592: error: cannot find symbol
+			return writer instanceof TiffWriter;
+			                         ^
+  symbol:   class TiffWriter
+  location: class OMEPyramidSeries
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:614: error: cannot find symbol
+			int nChannels = meta.getPixelsSizeC(series).getValue();
+			                    ^
+  symbol:   method getPixelsSizeC(int)
+  location: variable meta of type IMetadata
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:615: error: cannot find symbol
+			int nSamples = meta.getChannelSamplesPerPixel(series, 0).getValue();
+			                   ^
+  symbol:   method getChannelSamplesPerPixel(int,int)
+  location: variable meta of type IMetadata
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:616: error: cannot find symbol
+			int sizeZ = meta.getPixelsSizeZ(series).getValue();
+			                ^
+  symbol:   method getPixelsSizeZ(int)
+  location: variable meta of type IMetadata
+/local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:617: error: cannot find symbol
+			int sizeT = meta.getPixelsSizeT(series).getValue();
+			                ^
+  symbol:   method getPixelsSizeT(int)
+  location: variable meta of type IMetadata
+100 errors
+
+[Incubating] Problems report is available at: file:///local_data/muellewg/qupath/qupath/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':qupath-extension-bioformats:compileJava'.
+> Compilation failed; see the compiler output below.
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/ConvertCommand.java:33: error: package org.apache.commons.io does not exist
+  import org.apache.commons.io.FileUtils;
+                              ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:55: error: package loci.formats.out does not exist
+  import loci.formats.out.OMETiffWriter;
+                         ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:56: error: package loci.formats.out does not exist
+  import loci.formats.out.PyramidOMETiffWriter;
+                         ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:57: error: package loci.formats.out does not exist
+  import loci.formats.out.TiffWriter;
+                         ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:58: error: package loci.formats.tiff does not exist
+  import loci.formats.tiff.IFD;
+                          ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:59: error: package ome.units does not exist
+  import ome.units.UNITS;
+                  ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:60: error: package ome.units.quantity does not exist
+  import ome.units.quantity.Length;
+                           ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:61: error: package ome.xml.model.enums does not exist
+  import ome.xml.model.enums.DimensionOrder;
+                            ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:62: error: package ome.xml.model.primitives does not exist
+  import ome.xml.model.primitives.Color;
+                                 ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:63: error: package ome.xml.model.primitives does not exist
+  import ome.xml.model.primitives.PositiveInteger;
+                                 ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:584: error: cannot find symbol
+  		public void writePyramid(final PyramidOMETiffWriter writer, IMetadata meta, final int series) throws FormatException, IOException {
+  		                               ^
+    symbol:   class PyramidOMETiffWriter
+    location: class OMEPyramidSeries
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:899: error: cannot find symbol
+  		private void writeRegion(IFormatWriter writer, int plane, IFD ifd, ImageServer<BufferedImage> server, TileRequest tile, boolean isRGB, int[] channels) throws FormatException, IOException {
+  		                                                          ^
+    symbol:   class IFD
+    location: class OMEPyramidSeries
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:3: error: package ome.units does not exist
+  import ome.units.UNITS;
+                  ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:4: error: package ome.units.quantity does not exist
+  import ome.units.quantity.Length;
+                           ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:5: error: package ome.units.quantity does not exist
+  import ome.units.quantity.Time;
+                           ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:6: error: package ome.xml.model does not exist
+  import ome.xml.model.Channel;
+                      ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:7: error: package ome.xml.model does not exist
+  import ome.xml.model.Image;
+                      ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:8: error: package ome.xml.model does not exist
+  import ome.xml.model.Instrument;
+                      ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:9: error: package ome.xml.model does not exist
+  import ome.xml.model.OME;
+                      ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:10: error: package ome.xml.model does not exist
+  import ome.xml.model.Objective;
+                      ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:11: error: package ome.xml.model does not exist
+  import ome.xml.model.ObjectiveSettings;
+                      ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:12: error: package ome.xml.model does not exist
+  import ome.xml.model.Pixels;
+                      ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:13: error: package ome.xml.model.enums does not exist
+  import ome.xml.model.enums.DimensionOrder;
+                            ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:14: error: package ome.xml.model.enums does not exist
+  import ome.xml.model.enums.PixelType;
+                            ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:15: error: package ome.xml.model.primitives does not exist
+  import ome.xml.model.primitives.Color;
+                                 ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:16: error: package ome.xml.model.primitives does not exist
+  import ome.xml.model.primitives.PositiveInteger;
+                                 ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:88: error: cannot find symbol
+      private static Instrument createInstrument(double magnification) {
+                     ^
+    symbol:   class Instrument
+    location: class OMEXMLCreator
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:97: error: cannot find symbol
+      private static Image createImage(ImageServerMetadata metadata, Instrument instrument) {
+                                                                     ^
+    symbol:   class Instrument
+    location: class OMEXMLCreator
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:97: error: cannot find symbol
+      private static Image createImage(ImageServerMetadata metadata, Instrument instrument) {
+                     ^
+    symbol:   class Image
+    location: class OMEXMLCreator
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:114: error: cannot find symbol
+      private static Objective createObjective(double magnification) {
+                     ^
+    symbol:   class Objective
+    location: class OMEXMLCreator
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:123: error: cannot find symbol
+      private static Pixels createPixels(ImageServerMetadata metadata) {
+                     ^
+    symbol:   class Pixels
+    location: class OMEXMLCreator
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEXMLCreator.java:187: error: cannot find symbol
+      private static Channel createChannel(ImageServerMetadata metadata, ImageChannel imageChannel) {
+                     ^
+    symbol:   class Channel
+    location: class OMEXMLCreator
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/zarr/OMEZarrWriter.java:10: error: package loci.formats.gui does not exist
+  import loci.formats.gui.AWTImageTools;
+                         ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMETiffWriter.java:31: error: package loci.common does not exist
+  import loci.common.ByteArrayHandle;
+                    ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMETiffWriter.java:32: error: package loci.common does not exist
+  import loci.common.IRandomAccess;
+                    ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMETiffWriter.java:33: error: package loci.common does not exist
+  import loci.common.Location;
+                    ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMETiffWriter.java:125: error: cannot find symbol
+  	private String createInMemoryID(IRandomAccess access) {
+  	                                ^
+    symbol:   class IRandomAccess
+    location: class OMETiffWriter
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:26: error: package loci.common.services does not exist
+  import loci.common.services.DependencyException;
+                             ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:27: error: package loci.common.services does not exist
+  import loci.common.services.ServiceException;
+                             ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:29: error: cannot find symbol
+  import loci.formats.DimensionSwapper;
+                     ^
+    symbol:   class DimensionSwapper
+    location: package loci.formats
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:34: error: cannot find symbol
+  import loci.formats.Memoizer;
+                     ^
+    symbol:   class Memoizer
+    location: package loci.formats
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:37: error: package loci.formats.gui does not exist
+  import loci.formats.gui.AWTImageTools;
+                         ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:45: error: package ome.units does not exist
+  import ome.units.UNITS;
+                  ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:46: error: package ome.units.quantity does not exist
+  import ome.units.quantity.Length;
+                           ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:235: error: cannot find symbol
+  	public BioFormatsImageServer(final URI uri, String...args) throws FormatException, IOException, DependencyException, ServiceException, URISyntaxException {
+  	                                                                                                ^
+    symbol:   class DependencyException
+    location: class BioFormatsImageServer
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:235: error: cannot find symbol
+  	public BioFormatsImageServer(final URI uri, String...args) throws FormatException, IOException, DependencyException, ServiceException, URISyntaxException {
+  	                                                                                                                     ^
+    symbol:   class ServiceException
+    location: class BioFormatsImageServer
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:269: error: cannot find symbol
+  	BioFormatsImageServer(URI uri, final BioFormatsServerOptions options, String...args) throws FormatException, IOException, DependencyException, ServiceException, URISyntaxException {
+  	                                                                                                                          ^
+    symbol:   class DependencyException
+    location: class BioFormatsImageServer
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/BioFormatsImageServer.java:269: error: cannot find symbol
+  	BioFormatsImageServer(URI uri, final BioFormatsServerOptions options, String...args) throws FormatException, IOException, DependencyException, ServiceException, URISyntaxException {
+  	                                                                                                                                               ^
+    symbol:   class ServiceException
+    location: class BioFormatsImageServer
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/servers/bioformats/OMEPixelParser.java:27: error: package loci.common does not exist
+  import loci.common.DataTools;
+                    ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/ConvertCommand.java:190: error: cannot find symbol
+  					FileUtils.deleteDirectory(outputFile);
+  					^
+    symbol:   variable FileUtils
+    location: class ConvertCommand
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:141: error: cannot find symbol
+  				return OMETiffWriter.COMPRESSION_J2K;
+  				                    ^
+    symbol:   variable COMPRESSION_J2K
+    location: class OMETiffWriter
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:143: error: cannot find symbol
+  				return OMETiffWriter.COMPRESSION_J2K_LOSSY;
+  				                    ^
+    symbol:   variable COMPRESSION_J2K_LOSSY
+    location: class OMETiffWriter
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:145: error: cannot find symbol
+  				return OMETiffWriter.COMPRESSION_JPEG;
+  				                    ^
+    symbol:   variable COMPRESSION_JPEG
+    location: class OMETiffWriter
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:147: error: cannot find symbol
+  				return OMETiffWriter.COMPRESSION_UNCOMPRESSED;
+  				                    ^
+    symbol:   variable COMPRESSION_UNCOMPRESSED
+    location: class OMETiffWriter
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:149: error: cannot find symbol
+  				return OMETiffWriter.COMPRESSION_LZW;
+  				                    ^
+    symbol:   variable COMPRESSION_LZW
+    location: class OMETiffWriter
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:151: error: cannot find symbol
+  				return OMETiffWriter.COMPRESSION_ZLIB;
+  				                    ^
+    symbol:   variable COMPRESSION_ZLIB
+    location: class OMETiffWriter
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:155: error: cannot find symbol
+  					return OMETiffWriter.COMPRESSION_JPEG;
+  					                    ^
+    symbol:   variable COMPRESSION_JPEG
+    location: class OMETiffWriter
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:158: error: cannot find symbol
+  					return OMETiffWriter.COMPRESSION_LZW;
+  					                    ^
+    symbol:   variable COMPRESSION_LZW
+    location: class OMETiffWriter
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:160: error: cannot find symbol
+  					return OMETiffWriter.COMPRESSION_ZLIB;
+  					                    ^
+    symbol:   variable COMPRESSION_ZLIB
+    location: class OMETiffWriter
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:322: error: cannot access IMetadata
+  			writer.setMetadataRetrieve(meta);
+  			      ^
+    class file for ome.xml.meta.IMetadata not found
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:326: error: cannot find symbol
+  			if (wrappedWriter instanceof TiffWriter tiffWriter) {
+  			                             ^
+    symbol:   class TiffWriter
+    location: class OMEPyramidWriter
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:392: error: cannot access MetadataStore
+  			meta.setImageID("Image:"+series, series);
+  			    ^
+    class file for ome.xml.meta.MetadataStore not found
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:393: error: cannot access MetadataRetrieve
+  			meta.setPixelsID("Pixels:"+series, series);
+  			    ^
+    class file for ome.xml.meta.MetadataRetrieve not found
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:395: error: cannot find symbol
+  				meta.setImageName(name, series);
+  				    ^
+    symbol:   method setImageName(String,int)
+    location: variable meta of type IMetadata
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:397: error: cannot find symbol
+  			meta.setPixelsBigEndian(ByteOrder.BIG_ENDIAN.equals(endian), series);
+  			    ^
+    symbol:   method setPixelsBigEndian(boolean,int)
+    location: variable meta of type IMetadata
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:399: error: cannot find symbol
+  			meta.setPixelsDimensionOrder(DimensionOrder.XYCZT, series);
+  			                             ^
+    symbol:   variable DimensionOrder
+    location: class OMEPyramidSeries
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:403: error: package ome.xml.model.enums does not exist
+  				meta.setPixelsType(ome.xml.model.enums.PixelType.INT8, series);
+  				                                      ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:406: error: package ome.xml.model.enums does not exist
+  				meta.setPixelsType(ome.xml.model.enums.PixelType.UINT8, series);
+  				                                      ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:409: error: package ome.xml.model.enums does not exist
+  				meta.setPixelsType(ome.xml.model.enums.PixelType.INT16, series);
+  				                                      ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:412: error: package ome.xml.model.enums does not exist
+  				meta.setPixelsType(ome.xml.model.enums.PixelType.UINT16, series);
+  				                                      ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:415: error: package ome.xml.model.enums does not exist
+  				meta.setPixelsType(ome.xml.model.enums.PixelType.INT32, series);
+  				                                      ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:418: error: package ome.xml.model.enums does not exist
+  				meta.setPixelsType(ome.xml.model.enums.PixelType.UINT32, series);
+  				                                      ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:421: error: package ome.xml.model.enums does not exist
+  				meta.setPixelsType(ome.xml.model.enums.PixelType.FLOAT, series);
+  				                                      ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:424: error: package ome.xml.model.enums does not exist
+  				meta.setPixelsType(ome.xml.model.enums.PixelType.DOUBLE, series);
+  				                                      ^
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:429: error: cannot find symbol
+  			meta.setPixelsSizeX(new PositiveInteger((int)(width / downsamples[0])), series);
+  			                        ^
+    symbol:   class PositiveInteger
+    location: class OMEPyramidSeries
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:430: error: cannot find symbol
+  			meta.setPixelsSizeY(new PositiveInteger((int)(height / downsamples[0])), series);
+  			                        ^
+    symbol:   class PositiveInteger
+    location: class OMEPyramidSeries
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:439: error: cannot find symbol
+  			meta.setPixelsSizeZ(new PositiveInteger(sizeZ), series);
+  			                        ^
+    symbol:   class PositiveInteger
+    location: class OMEPyramidSeries
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:440: error: cannot find symbol
+  			meta.setPixelsSizeT(new PositiveInteger(sizeT), series);
+  			                        ^
+    symbol:   class PositiveInteger
+    location: class OMEPyramidSeries
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:475: error: cannot find symbol
+  			meta.setPixelsSizeC(new PositiveInteger(nChannels), series);
+  			                        ^
+    symbol:   class PositiveInteger
+    location: class OMEPyramidSeries
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:477: error: cannot find symbol
+  				meta.setChannelID("Channel:0", series, 0);			
+  				    ^
+    symbol:   method setChannelID(String,int,int)
+    location: variable meta of type IMetadata
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:478: error: cannot find symbol
+  				meta.setPixelsInterleaved(isInterleaved, series);
+  				    ^
+    symbol:   method setPixelsInterleaved(boolean,int)
+    location: variable meta of type IMetadata
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:479: error: cannot find symbol
+  				meta.setChannelSamplesPerPixel(new PositiveInteger(nSamples), series, 0);	
+  				                                   ^
+    symbol:   class PositiveInteger
+    location: class OMEPyramidSeries
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:481: error: cannot find symbol
+  				meta.setChannelSamplesPerPixel(new PositiveInteger(nSamples), series, 0);
+  				                                   ^
+    symbol:   class PositiveInteger
+    location: class OMEPyramidSeries
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:482: error: cannot find symbol
+  				meta.setPixelsInterleaved(isInterleaved, series);
+  				    ^
+    symbol:   method setPixelsInterleaved(boolean,int)
+    location: variable meta of type IMetadata
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:484: error: cannot find symbol
+  					meta.setChannelID("Channel:0:" + c, series, c);			
+  					    ^
+    symbol:   method setChannelID(String,int,int)
+    location: variable meta of type IMetadata
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:489: error: cannot find symbol
+  					meta.setChannelColor(new Color(
+  					                         ^
+    symbol:   class Color
+    location: class OMEPyramidSeries
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:495: error: cannot find symbol
+  					meta.setChannelName(channel.getName(), series, c);
+  					    ^
+    symbol:   method setChannelName(String,int,int)
+    location: variable meta of type IMetadata
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:502: error: cannot find symbol
+  				meta.setPixelsPhysicalSizeX(new Length(cal.getPixelWidthMicrons() * downsamples[0], UNITS.MICROMETER), series);
+  				                                ^
+    symbol:   class Length
+    location: class OMEPyramidSeries
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:502: error: cannot find symbol
+  				meta.setPixelsPhysicalSizeX(new Length(cal.getPixelWidthMicrons() * downsamples[0], UNITS.MICROMETER), series);
+  				                                                                                    ^
+    symbol:   variable UNITS
+    location: class OMEPyramidSeries
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:503: error: cannot find symbol
+  				meta.setPixelsPhysicalSizeY(new Length(cal.getPixelHeightMicrons() * downsamples[0], UNITS.MICROMETER), series);
+  				                                ^
+    symbol:   class Length
+    location: class OMEPyramidSeries
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:503: error: cannot find symbol
+  				meta.setPixelsPhysicalSizeY(new Length(cal.getPixelHeightMicrons() * downsamples[0], UNITS.MICROMETER), series);
+  				                                                                                     ^
+    symbol:   variable UNITS
+    location: class OMEPyramidSeries
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:506: error: cannot find symbol
+  				meta.setPixelsPhysicalSizeZ(new Length(cal.getZSpacingMicrons(), UNITS.MICROMETER), series);
+  				                                ^
+    symbol:   class Length
+    location: class OMEPyramidSeries
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:506: error: cannot find symbol
+  				meta.setPixelsPhysicalSizeZ(new Length(cal.getZSpacingMicrons(), UNITS.MICROMETER), series);
+  				                                                                 ^
+    symbol:   variable UNITS
+    location: class OMEPyramidSeries
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:528: error: cannot find symbol
+  				((IPyramidStore)meta).setResolutionSizeX(new PositiveInteger(w), series, level);
+  				                                             ^
+    symbol:   class PositiveInteger
+    location: class OMEPyramidSeries
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:529: error: cannot find symbol
+  				((IPyramidStore)meta).setResolutionSizeY(new PositiveInteger(h), series, level);
+  				                                             ^
+    symbol:   class PositiveInteger
+    location: class OMEPyramidSeries
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:592: error: cannot find symbol
+  			return writer instanceof TiffWriter;
+  			                         ^
+    symbol:   class TiffWriter
+    location: class OMEPyramidSeries
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:614: error: cannot find symbol
+  			int nChannels = meta.getPixelsSizeC(series).getValue();
+  			                    ^
+    symbol:   method getPixelsSizeC(int)
+    location: variable meta of type IMetadata
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:615: error: cannot find symbol
+  			int nSamples = meta.getChannelSamplesPerPixel(series, 0).getValue();
+  			                   ^
+    symbol:   method getChannelSamplesPerPixel(int,int)
+    location: variable meta of type IMetadata
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:616: error: cannot find symbol
+  			int sizeZ = meta.getPixelsSizeZ(series).getValue();
+  			                ^
+    symbol:   method getPixelsSizeZ(int)
+    location: variable meta of type IMetadata
+  /local_data/muellewg/qupath/qupath/qupath-extension-bioformats/src/main/java/qupath/lib/images/writers/ome/OMEPyramidWriter.java:617: error: cannot find symbol
+  			int sizeT = meta.getPixelsSizeT(series).getValue();
+  			                ^
+    symbol:   method getPixelsSizeT(int)
+    location: variable meta of type IMetadata
+  100 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights.
+
+BUILD FAILED in 1s
+23 actionable tasks: 1 executed, 22 up-to-date

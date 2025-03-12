@@ -13,13 +13,12 @@ base {
   description = "QuPath extension to support image reading and writing using Bio-Formats."
 }
 
-var bioformatsVersion = libs.versions.bioformats.get()
+var bioformatsVersion = "8.2.0-SNAPSHOT" //libs.versions.bioformats.get()
 val versionOverride = project.properties["bioformats-version"]
 if (versionOverride is String) {
 	println("Using specified Bio-Formats version $versionOverride")
 	bioformatsVersion = versionOverride
 }
-
 // Warn about Apple Silicon support
 val platform: PlatformPlugin.Platform = Utils.currentPlatform()
 if (platform == PlatformPlugin.Platform.MAC_AARCH64) {
@@ -32,17 +31,27 @@ if (platform == PlatformPlugin.Platform.MAC_AARCH64) {
 
 
 dependencies {
-	// This can be used to include bioformats_package.jar - however it causes warnings with SLF4J
+// This can be used to include bioformats_package.jar - however it causes warnings with SLF4J
 //  implementation("ome:bioformats_package:${bioformatsVersion}") {
 //  	isTransitive = false
 //  }
 
+implementation(files("/local_data/muellewg/qupath/bioformats/components/bundles/bioformats_package/target/bioformats_package-8.2.0-SNAPSHOT.jar"))
+implementation(files("/local_data/muellewg/qupath/bioformats/components/bio-formats-plugins/target/bio-formats_plugins-8.2.0-SNAPSHOT.jar"))
+implementation(files("/local_data/muellewg/qupath/bioformats/components/bio-formats-tools/target/bio-formats-tools-8.2.0-SNAPSHOT.jar"))
+implementation(files("/local_data/muellewg/qupath/bioformats/components/formats-gpl/target/formats-gpl-8.2.0-SNAPSHOT.jar"))
+implementation(files("/local_data/muellewg/qupath/bioformats/components/formats-bsd/target/formats-bsd-8.2.0-SNAPSHOT.jar"))
+implementation(files("/local_data/muellewg/qupath/bioformats/components/formats-api/target/formats-api-8.2.0-SNAPSHOT.jar"))
+//implementation(files("../bioformats/./components/forks/turbojpeg/target/turbojpeg-8.2.0-SNAPSHOT.jar") )
+//implementation(files("../bioformats/./components/test-suite/target/test-suite-8.2.0-SNAPSHOT.jar"))
   implementation(libs.qupath.fxtras)
   implementation(libs.controlsfx)
   implementation(libs.picocli)
   implementation(libs.jna)           // needed for OMEZarrReader (see https://github.com/bcdev/jzarr/issues/31)
 
-  implementation("ome:formats-gpl:${bioformatsVersion}") {
+
+  
+  /*implementation("ome:formats-gpl:${bioformatsVersion}") {
     exclude(group="xalan", module="serializer")
     exclude(group="xalan", module="xalan")
     exclude(group="io.minio", module="minio")
@@ -51,7 +60,7 @@ dependencies {
 //        exclude(group="edu.ucar", module="cdm")
     exclude(group="com.google.code.findbugs", module="jsr305")
     exclude(group="com.google.code.findbugs", module="annotations")
-  }
+  }*/
   implementation(libs.omeZarrReader) {
       exclude(group="ome", module="formats-api") // Through bioformats_package
   }
@@ -59,8 +68,9 @@ dependencies {
   implementation("io.github.qupath:blosc:${libs.versions.blosc.get()}:${platform.classifier}")
 
 //  testImplementation("ome:bioformats_package:${bioformatsVersion}")
-  testImplementation("ome:bio-formats_plugins:${bioformatsVersion}")
+  //testImplementation("ome:bio-formats_plugins:${bioformatsVersion}")
   
-  testImplementation(libs.imagej)
+	testImplementation(files("../bioformats/components/bio-formats-plugins/target/bio-formats_plugins-8.2.0-SNAPSHOT.jar"))
+	testImplementation(libs.imagej)
   
 }

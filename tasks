@@ -1,0 +1,473 @@
+
+------------------------------------------------------------
+Tasks runnable from root project 'qupath'
+------------------------------------------------------------
+
+Application tasks
+-----------------
+run - Runs this project as a JVM application
+
+Build tasks
+-----------
+assemble - Assembles the outputs of this project.
+qupath-app:assemble - Assembles the outputs of this project.
+qupath-core:assemble - Assembles the outputs of this project.
+qupath-core-processing:assemble - Assembles the outputs of this project.
+qupath-extension-bioformats:assemble - Assembles the outputs of this project.
+qupath-extension-openslide:assemble - Assembles the outputs of this project.
+qupath-extension-processing:assemble - Assembles the outputs of this project.
+qupath-extension-script-editor:assemble - Assembles the outputs of this project.
+qupath-extension-svg:assemble - Assembles the outputs of this project.
+qupath-gui-fx:assemble - Assembles the outputs of this project.
+build - Assembles and tests this project.
+qupath-app:build - Assembles and tests this project.
+qupath-core:build - Assembles and tests this project.
+qupath-core-processing:build - Assembles and tests this project.
+qupath-extension-bioformats:build - Assembles and tests this project.
+qupath-extension-openslide:build - Assembles and tests this project.
+qupath-extension-processing:build - Assembles and tests this project.
+qupath-extension-script-editor:build - Assembles and tests this project.
+qupath-extension-svg:build - Assembles and tests this project.
+qupath-gui-fx:build - Assembles and tests this project.
+buildDependents - Assembles and tests this project and all projects that depend on it.
+qupath-app:buildDependents - Assembles and tests this project and all projects that depend on it.
+qupath-core:buildDependents - Assembles and tests this project and all projects that depend on it.
+qupath-core-processing:buildDependents - Assembles and tests this project and all projects that depend on it.
+qupath-extension-bioformats:buildDependents - Assembles and tests this project and all projects that depend on it.
+qupath-extension-openslide:buildDependents - Assembles and tests this project and all projects that depend on it.
+qupath-extension-processing:buildDependents - Assembles and tests this project and all projects that depend on it.
+qupath-extension-script-editor:buildDependents - Assembles and tests this project and all projects that depend on it.
+qupath-extension-svg:buildDependents - Assembles and tests this project and all projects that depend on it.
+qupath-gui-fx:buildDependents - Assembles and tests this project and all projects that depend on it.
+buildNeeded - Assembles and tests this project and all projects it depends on.
+qupath-app:buildNeeded - Assembles and tests this project and all projects it depends on.
+qupath-core:buildNeeded - Assembles and tests this project and all projects it depends on.
+qupath-core-processing:buildNeeded - Assembles and tests this project and all projects it depends on.
+qupath-extension-bioformats:buildNeeded - Assembles and tests this project and all projects it depends on.
+qupath-extension-openslide:buildNeeded - Assembles and tests this project and all projects it depends on.
+qupath-extension-processing:buildNeeded - Assembles and tests this project and all projects it depends on.
+qupath-extension-script-editor:buildNeeded - Assembles and tests this project and all projects it depends on.
+qupath-extension-svg:buildNeeded - Assembles and tests this project and all projects it depends on.
+qupath-gui-fx:buildNeeded - Assembles and tests this project and all projects it depends on.
+classes - Assembles main classes.
+qupath-app:classes - Assembles main classes.
+qupath-core:classes - Assembles main classes.
+qupath-core-processing:classes - Assembles main classes.
+qupath-extension-bioformats:classes - Assembles main classes.
+qupath-extension-openslide:classes - Assembles main classes.
+qupath-extension-processing:classes - Assembles main classes.
+qupath-extension-script-editor:classes - Assembles main classes.
+qupath-extension-svg:classes - Assembles main classes.
+qupath-gui-fx:classes - Assembles main classes.
+clean - Deletes the build directory.
+qupath-app:clean - Deletes the build directory.
+qupath-core:clean - Deletes the build directory.
+qupath-core-processing:clean - Deletes the build directory.
+qupath-extension-bioformats:clean - Deletes the build directory.
+qupath-extension-openslide:clean - Deletes the build directory.
+qupath-extension-processing:clean - Deletes the build directory.
+qupath-extension-script-editor:clean - Deletes the build directory.
+qupath-extension-svg:clean - Deletes the build directory.
+qupath-gui-fx:clean - Deletes the build directory.
+generateCatalogAsToml - Generates a TOML file for a version catalog
+jar - Assembles a jar archive containing the classes of the 'main' feature.
+qupath-app:jar - Assembles a jar archive containing the classes of the 'main' feature.
+qupath-core:jar - Assembles a jar archive containing the classes of the 'main' feature.
+qupath-core-processing:jar - Assembles a jar archive containing the classes of the 'main' feature.
+qupath-extension-bioformats:jar - Assembles a jar archive containing the classes of the 'main' feature.
+qupath-extension-openslide:jar - Assembles a jar archive containing the classes of the 'main' feature.
+qupath-extension-processing:jar - Assembles a jar archive containing the classes of the 'main' feature.
+qupath-extension-script-editor:jar - Assembles a jar archive containing the classes of the 'main' feature.
+qupath-extension-svg:jar - Assembles a jar archive containing the classes of the 'main' feature.
+qupath-gui-fx:jar - Assembles a jar archive containing the classes of the 'main' feature.
+javadocJar - Assembles a jar archive containing the main javadoc.
+qupath-app:javadocJar - Assembles a jar archive containing the main javadoc.
+qupath-core:javadocJar - Assembles a jar archive containing the main javadoc.
+qupath-core-processing:javadocJar - Assembles a jar archive containing the main javadoc.
+qupath-extension-bioformats:javadocJar - Assembles a jar archive containing the main javadoc.
+qupath-extension-openslide:javadocJar - Assembles a jar archive containing the main javadoc.
+qupath-extension-processing:javadocJar - Assembles a jar archive containing the main javadoc.
+qupath-extension-script-editor:javadocJar - Assembles a jar archive containing the main javadoc.
+qupath-extension-svg:javadocJar - Assembles a jar archive containing the main javadoc.
+qupath-gui-fx:javadocJar - Assembles a jar archive containing the main javadoc.
+jpackage - Creates an application installer using the jpackage tool
+jpackageImage - Creates an application image using the jpackage tool
+jre - Creates a custom java runtime image with jlink
+runtime - Creates a runtime image of your application
+runtimeZip - Creates a zip of the runtime image of your application
+sourcesJar - Assembles a jar archive containing the main sources.
+qupath-app:sourcesJar - Assembles a jar archive containing the main sources.
+qupath-core:sourcesJar - Assembles a jar archive containing the main sources.
+qupath-core-processing:sourcesJar - Assembles a jar archive containing the main sources.
+qupath-extension-bioformats:sourcesJar - Assembles a jar archive containing the main sources.
+qupath-extension-openslide:sourcesJar - Assembles a jar archive containing the main sources.
+qupath-extension-processing:sourcesJar - Assembles a jar archive containing the main sources.
+qupath-extension-script-editor:sourcesJar - Assembles a jar archive containing the main sources.
+qupath-extension-svg:sourcesJar - Assembles a jar archive containing the main sources.
+qupath-gui-fx:sourcesJar - Assembles a jar archive containing the main sources.
+suggestModules - Suggests the modules to be included in the runtime image
+testClasses - Assembles test classes.
+qupath-app:testClasses - Assembles test classes.
+qupath-core:testClasses - Assembles test classes.
+qupath-core-processing:testClasses - Assembles test classes.
+qupath-extension-bioformats:testClasses - Assembles test classes.
+qupath-extension-openslide:testClasses - Assembles test classes.
+qupath-extension-processing:testClasses - Assembles test classes.
+qupath-extension-script-editor:testClasses - Assembles test classes.
+qupath-extension-svg:testClasses - Assembles test classes.
+qupath-gui-fx:testClasses - Assembles test classes.
+
+Build Setup tasks
+-----------------
+init - Initializes a new Gradle build.
+updateDaemonJvm - Generates or updates the Gradle Daemon JVM criteria.
+wrapper - Generates Gradle wrapper files.
+
+Checking tasks
+--------------
+checkLicense - Check if License could be used
+
+CheckingPreparation tasks
+-------------------------
+checkLicensePreparation - Prepare for checkLicense
+
+Distribution tasks
+------------------
+assembleDist - Assembles the main distributions
+distTar - Bundles the project as a distribution.
+distZip - Bundles the project as a distribution.
+installDist - Installs the project as a distribution as-is.
+
+Documentation tasks
+-------------------
+assembleJavadocs - Copies the Javadoc jars to a directory for access within QuPath
+javadoc - Generates Javadoc API documentation for the 'main' feature.
+qupath-app:javadoc - Generates Javadoc API documentation for the 'main' feature.
+qupath-core:javadoc - Generates Javadoc API documentation for the 'main' feature.
+qupath-core-processing:javadoc - Generates Javadoc API documentation for the 'main' feature.
+qupath-extension-bioformats:javadoc - Generates Javadoc API documentation for the 'main' feature.
+qupath-extension-openslide:javadoc - Generates Javadoc API documentation for the 'main' feature.
+qupath-extension-processing:javadoc - Generates Javadoc API documentation for the 'main' feature.
+qupath-extension-script-editor:javadoc - Generates Javadoc API documentation for the 'main' feature.
+qupath-extension-svg:javadoc - Generates Javadoc API documentation for the 'main' feature.
+qupath-gui-fx:javadoc - Generates Javadoc API documentation for the 'main' feature.
+mergedJavadocs - Generate merged javadocs for all projects
+
+Help tasks
+----------
+buildEnvironment - Displays all buildscript dependencies declared in root project 'qupath'.
+qupath-app:buildEnvironment - Displays all buildscript dependencies declared in project ':qupath-app'.
+qupath-core:buildEnvironment - Displays all buildscript dependencies declared in project ':qupath-core'.
+qupath-core-processing:buildEnvironment - Displays all buildscript dependencies declared in project ':qupath-core-processing'.
+qupath-extension-bioformats:buildEnvironment - Displays all buildscript dependencies declared in project ':qupath-extension-bioformats'.
+qupath-extension-openslide:buildEnvironment - Displays all buildscript dependencies declared in project ':qupath-extension-openslide'.
+qupath-extension-processing:buildEnvironment - Displays all buildscript dependencies declared in project ':qupath-extension-processing'.
+qupath-extension-script-editor:buildEnvironment - Displays all buildscript dependencies declared in project ':qupath-extension-script-editor'.
+qupath-extension-svg:buildEnvironment - Displays all buildscript dependencies declared in project ':qupath-extension-svg'.
+qupath-gui-fx:buildEnvironment - Displays all buildscript dependencies declared in project ':qupath-gui-fx'.
+dependencies - Displays all dependencies declared in root project 'qupath'.
+qupath-app:dependencies - Displays all dependencies declared in project ':qupath-app'.
+qupath-core:dependencies - Displays all dependencies declared in project ':qupath-core'.
+qupath-core-processing:dependencies - Displays all dependencies declared in project ':qupath-core-processing'.
+qupath-extension-bioformats:dependencies - Displays all dependencies declared in project ':qupath-extension-bioformats'.
+qupath-extension-openslide:dependencies - Displays all dependencies declared in project ':qupath-extension-openslide'.
+qupath-extension-processing:dependencies - Displays all dependencies declared in project ':qupath-extension-processing'.
+qupath-extension-script-editor:dependencies - Displays all dependencies declared in project ':qupath-extension-script-editor'.
+qupath-extension-svg:dependencies - Displays all dependencies declared in project ':qupath-extension-svg'.
+qupath-gui-fx:dependencies - Displays all dependencies declared in project ':qupath-gui-fx'.
+dependencyInsight - Displays the insight into a specific dependency in root project 'qupath'.
+qupath-app:dependencyInsight - Displays the insight into a specific dependency in project ':qupath-app'.
+qupath-core:dependencyInsight - Displays the insight into a specific dependency in project ':qupath-core'.
+qupath-core-processing:dependencyInsight - Displays the insight into a specific dependency in project ':qupath-core-processing'.
+qupath-extension-bioformats:dependencyInsight - Displays the insight into a specific dependency in project ':qupath-extension-bioformats'.
+qupath-extension-openslide:dependencyInsight - Displays the insight into a specific dependency in project ':qupath-extension-openslide'.
+qupath-extension-processing:dependencyInsight - Displays the insight into a specific dependency in project ':qupath-extension-processing'.
+qupath-extension-script-editor:dependencyInsight - Displays the insight into a specific dependency in project ':qupath-extension-script-editor'.
+qupath-extension-svg:dependencyInsight - Displays the insight into a specific dependency in project ':qupath-extension-svg'.
+qupath-gui-fx:dependencyInsight - Displays the insight into a specific dependency in project ':qupath-gui-fx'.
+help - Displays a help message.
+qupath-app:help - Displays a help message.
+qupath-core:help - Displays a help message.
+qupath-core-processing:help - Displays a help message.
+qupath-extension-bioformats:help - Displays a help message.
+qupath-extension-openslide:help - Displays a help message.
+qupath-extension-processing:help - Displays a help message.
+qupath-extension-script-editor:help - Displays a help message.
+qupath-extension-svg:help - Displays a help message.
+qupath-gui-fx:help - Displays a help message.
+javaToolchains - Displays the detected java toolchains.
+qupath-app:javaToolchains - Displays the detected java toolchains.
+qupath-core:javaToolchains - Displays the detected java toolchains.
+qupath-core-processing:javaToolchains - Displays the detected java toolchains.
+qupath-extension-bioformats:javaToolchains - Displays the detected java toolchains.
+qupath-extension-openslide:javaToolchains - Displays the detected java toolchains.
+qupath-extension-processing:javaToolchains - Displays the detected java toolchains.
+qupath-extension-script-editor:javaToolchains - Displays the detected java toolchains.
+qupath-extension-svg:javaToolchains - Displays the detected java toolchains.
+qupath-gui-fx:javaToolchains - Displays the detected java toolchains.
+kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions and conventions.
+qupath-app:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions and conventions.
+qupath-core:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions and conventions.
+qupath-core-processing:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions and conventions.
+qupath-extension-bioformats:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions and conventions.
+qupath-extension-openslide:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions and conventions.
+qupath-extension-processing:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions and conventions.
+qupath-extension-script-editor:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions and conventions.
+qupath-extension-svg:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions and conventions.
+qupath-gui-fx:kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions and conventions.
+outgoingVariants - Displays the outgoing variants of root project 'qupath'.
+qupath-app:outgoingVariants - Displays the outgoing variants of project ':qupath-app'.
+qupath-core:outgoingVariants - Displays the outgoing variants of project ':qupath-core'.
+qupath-core-processing:outgoingVariants - Displays the outgoing variants of project ':qupath-core-processing'.
+qupath-extension-bioformats:outgoingVariants - Displays the outgoing variants of project ':qupath-extension-bioformats'.
+qupath-extension-openslide:outgoingVariants - Displays the outgoing variants of project ':qupath-extension-openslide'.
+qupath-extension-processing:outgoingVariants - Displays the outgoing variants of project ':qupath-extension-processing'.
+qupath-extension-script-editor:outgoingVariants - Displays the outgoing variants of project ':qupath-extension-script-editor'.
+qupath-extension-svg:outgoingVariants - Displays the outgoing variants of project ':qupath-extension-svg'.
+qupath-gui-fx:outgoingVariants - Displays the outgoing variants of project ':qupath-gui-fx'.
+projects - Displays the sub-projects of root project 'qupath'.
+qupath-app:projects - Displays the sub-projects of project ':qupath-app'.
+qupath-core:projects - Displays the sub-projects of project ':qupath-core'.
+qupath-core-processing:projects - Displays the sub-projects of project ':qupath-core-processing'.
+qupath-extension-bioformats:projects - Displays the sub-projects of project ':qupath-extension-bioformats'.
+qupath-extension-openslide:projects - Displays the sub-projects of project ':qupath-extension-openslide'.
+qupath-extension-processing:projects - Displays the sub-projects of project ':qupath-extension-processing'.
+qupath-extension-script-editor:projects - Displays the sub-projects of project ':qupath-extension-script-editor'.
+qupath-extension-svg:projects - Displays the sub-projects of project ':qupath-extension-svg'.
+qupath-gui-fx:projects - Displays the sub-projects of project ':qupath-gui-fx'.
+properties - Displays the properties of root project 'qupath'.
+qupath-app:properties - Displays the properties of project ':qupath-app'.
+qupath-core:properties - Displays the properties of project ':qupath-core'.
+qupath-core-processing:properties - Displays the properties of project ':qupath-core-processing'.
+qupath-extension-bioformats:properties - Displays the properties of project ':qupath-extension-bioformats'.
+qupath-extension-openslide:properties - Displays the properties of project ':qupath-extension-openslide'.
+qupath-extension-processing:properties - Displays the properties of project ':qupath-extension-processing'.
+qupath-extension-script-editor:properties - Displays the properties of project ':qupath-extension-script-editor'.
+qupath-extension-svg:properties - Displays the properties of project ':qupath-extension-svg'.
+qupath-gui-fx:properties - Displays the properties of project ':qupath-gui-fx'.
+resolvableConfigurations - Displays the configurations that can be resolved in root project 'qupath'.
+qupath-app:resolvableConfigurations - Displays the configurations that can be resolved in project ':qupath-app'.
+qupath-core:resolvableConfigurations - Displays the configurations that can be resolved in project ':qupath-core'.
+qupath-core-processing:resolvableConfigurations - Displays the configurations that can be resolved in project ':qupath-core-processing'.
+qupath-extension-bioformats:resolvableConfigurations - Displays the configurations that can be resolved in project ':qupath-extension-bioformats'.
+qupath-extension-openslide:resolvableConfigurations - Displays the configurations that can be resolved in project ':qupath-extension-openslide'.
+qupath-extension-processing:resolvableConfigurations - Displays the configurations that can be resolved in project ':qupath-extension-processing'.
+qupath-extension-script-editor:resolvableConfigurations - Displays the configurations that can be resolved in project ':qupath-extension-script-editor'.
+qupath-extension-svg:resolvableConfigurations - Displays the configurations that can be resolved in project ':qupath-extension-svg'.
+qupath-gui-fx:resolvableConfigurations - Displays the configurations that can be resolved in project ':qupath-gui-fx'.
+tasks - Displays the tasks runnable from root project 'qupath' (some of the displayed tasks may belong to subprojects).
+qupath-app:tasks - Displays the tasks runnable from project ':qupath-app'.
+qupath-core:tasks - Displays the tasks runnable from project ':qupath-core'.
+qupath-core-processing:tasks - Displays the tasks runnable from project ':qupath-core-processing'.
+qupath-extension-bioformats:tasks - Displays the tasks runnable from project ':qupath-extension-bioformats'.
+qupath-extension-openslide:tasks - Displays the tasks runnable from project ':qupath-extension-openslide'.
+qupath-extension-processing:tasks - Displays the tasks runnable from project ':qupath-extension-processing'.
+qupath-extension-script-editor:tasks - Displays the tasks runnable from project ':qupath-extension-script-editor'.
+qupath-extension-svg:tasks - Displays the tasks runnable from project ':qupath-extension-svg'.
+qupath-gui-fx:tasks - Displays the tasks runnable from project ':qupath-gui-fx'.
+
+Publishing tasks
+----------------
+qupath-app:generateMetadataFileForMavenJavaPublication - Generates the Gradle metadata file for publication 'mavenJava'.
+qupath-core:generateMetadataFileForMavenJavaPublication - Generates the Gradle metadata file for publication 'mavenJava'.
+qupath-core-processing:generateMetadataFileForMavenJavaPublication - Generates the Gradle metadata file for publication 'mavenJava'.
+qupath-extension-bioformats:generateMetadataFileForMavenJavaPublication - Generates the Gradle metadata file for publication 'mavenJava'.
+qupath-extension-openslide:generateMetadataFileForMavenJavaPublication - Generates the Gradle metadata file for publication 'mavenJava'.
+qupath-extension-processing:generateMetadataFileForMavenJavaPublication - Generates the Gradle metadata file for publication 'mavenJava'.
+qupath-extension-script-editor:generateMetadataFileForMavenJavaPublication - Generates the Gradle metadata file for publication 'mavenJava'.
+qupath-extension-svg:generateMetadataFileForMavenJavaPublication - Generates the Gradle metadata file for publication 'mavenJava'.
+qupath-gui-fx:generateMetadataFileForMavenJavaPublication - Generates the Gradle metadata file for publication 'mavenJava'.
+generateMetadataFileForMavenPublication - Generates the Gradle metadata file for publication 'maven'.
+qupath-app:generatePomFileForMavenJavaPublication - Generates the Maven POM file for publication 'mavenJava'.
+qupath-core:generatePomFileForMavenJavaPublication - Generates the Maven POM file for publication 'mavenJava'.
+qupath-core-processing:generatePomFileForMavenJavaPublication - Generates the Maven POM file for publication 'mavenJava'.
+qupath-extension-bioformats:generatePomFileForMavenJavaPublication - Generates the Maven POM file for publication 'mavenJava'.
+qupath-extension-openslide:generatePomFileForMavenJavaPublication - Generates the Maven POM file for publication 'mavenJava'.
+qupath-extension-processing:generatePomFileForMavenJavaPublication - Generates the Maven POM file for publication 'mavenJava'.
+qupath-extension-script-editor:generatePomFileForMavenJavaPublication - Generates the Maven POM file for publication 'mavenJava'.
+qupath-extension-svg:generatePomFileForMavenJavaPublication - Generates the Maven POM file for publication 'mavenJava'.
+qupath-gui-fx:generatePomFileForMavenJavaPublication - Generates the Maven POM file for publication 'mavenJava'.
+generatePomFileForMavenPublication - Generates the Maven POM file for publication 'maven'.
+publish - Publishes all publications produced by this project.
+qupath-app:publish - Publishes all publications produced by this project.
+qupath-core:publish - Publishes all publications produced by this project.
+qupath-core-processing:publish - Publishes all publications produced by this project.
+qupath-extension-bioformats:publish - Publishes all publications produced by this project.
+qupath-extension-openslide:publish - Publishes all publications produced by this project.
+qupath-extension-processing:publish - Publishes all publications produced by this project.
+qupath-extension-script-editor:publish - Publishes all publications produced by this project.
+qupath-extension-svg:publish - Publishes all publications produced by this project.
+qupath-gui-fx:publish - Publishes all publications produced by this project.
+publishAllPublicationsToSciJavaRepository - Publishes all Maven publications produced by this project to the SciJava repository.
+qupath-app:publishAllPublicationsToSciJavaRepository - Publishes all Maven publications produced by this project to the SciJava repository.
+qupath-core:publishAllPublicationsToSciJavaRepository - Publishes all Maven publications produced by this project to the SciJava repository.
+qupath-core-processing:publishAllPublicationsToSciJavaRepository - Publishes all Maven publications produced by this project to the SciJava repository.
+qupath-extension-bioformats:publishAllPublicationsToSciJavaRepository - Publishes all Maven publications produced by this project to the SciJava repository.
+qupath-extension-openslide:publishAllPublicationsToSciJavaRepository - Publishes all Maven publications produced by this project to the SciJava repository.
+qupath-extension-processing:publishAllPublicationsToSciJavaRepository - Publishes all Maven publications produced by this project to the SciJava repository.
+qupath-extension-script-editor:publishAllPublicationsToSciJavaRepository - Publishes all Maven publications produced by this project to the SciJava repository.
+qupath-extension-svg:publishAllPublicationsToSciJavaRepository - Publishes all Maven publications produced by this project to the SciJava repository.
+qupath-gui-fx:publishAllPublicationsToSciJavaRepository - Publishes all Maven publications produced by this project to the SciJava repository.
+qupath-app:publishMavenJavaPublicationToMavenLocal - Publishes Maven publication 'mavenJava' to the local Maven repository.
+qupath-core:publishMavenJavaPublicationToMavenLocal - Publishes Maven publication 'mavenJava' to the local Maven repository.
+qupath-core-processing:publishMavenJavaPublicationToMavenLocal - Publishes Maven publication 'mavenJava' to the local Maven repository.
+qupath-extension-bioformats:publishMavenJavaPublicationToMavenLocal - Publishes Maven publication 'mavenJava' to the local Maven repository.
+qupath-extension-openslide:publishMavenJavaPublicationToMavenLocal - Publishes Maven publication 'mavenJava' to the local Maven repository.
+qupath-extension-processing:publishMavenJavaPublicationToMavenLocal - Publishes Maven publication 'mavenJava' to the local Maven repository.
+qupath-extension-script-editor:publishMavenJavaPublicationToMavenLocal - Publishes Maven publication 'mavenJava' to the local Maven repository.
+qupath-extension-svg:publishMavenJavaPublicationToMavenLocal - Publishes Maven publication 'mavenJava' to the local Maven repository.
+qupath-gui-fx:publishMavenJavaPublicationToMavenLocal - Publishes Maven publication 'mavenJava' to the local Maven repository.
+qupath-app:publishMavenJavaPublicationToSciJavaRepository - Publishes Maven publication 'mavenJava' to Maven repository 'SciJava'.
+qupath-core:publishMavenJavaPublicationToSciJavaRepository - Publishes Maven publication 'mavenJava' to Maven repository 'SciJava'.
+qupath-core-processing:publishMavenJavaPublicationToSciJavaRepository - Publishes Maven publication 'mavenJava' to Maven repository 'SciJava'.
+qupath-extension-bioformats:publishMavenJavaPublicationToSciJavaRepository - Publishes Maven publication 'mavenJava' to Maven repository 'SciJava'.
+qupath-extension-openslide:publishMavenJavaPublicationToSciJavaRepository - Publishes Maven publication 'mavenJava' to Maven repository 'SciJava'.
+qupath-extension-processing:publishMavenJavaPublicationToSciJavaRepository - Publishes Maven publication 'mavenJava' to Maven repository 'SciJava'.
+qupath-extension-script-editor:publishMavenJavaPublicationToSciJavaRepository - Publishes Maven publication 'mavenJava' to Maven repository 'SciJava'.
+qupath-extension-svg:publishMavenJavaPublicationToSciJavaRepository - Publishes Maven publication 'mavenJava' to Maven repository 'SciJava'.
+qupath-gui-fx:publishMavenJavaPublicationToSciJavaRepository - Publishes Maven publication 'mavenJava' to Maven repository 'SciJava'.
+publishMavenPublicationToMavenLocal - Publishes Maven publication 'maven' to the local Maven repository.
+publishMavenPublicationToSciJavaRepository - Publishes Maven publication 'maven' to Maven repository 'SciJava'.
+publishToMavenLocal - Publishes all Maven publications produced by this project to the local Maven cache.
+qupath-app:publishToMavenLocal - Publishes all Maven publications produced by this project to the local Maven cache.
+qupath-core:publishToMavenLocal - Publishes all Maven publications produced by this project to the local Maven cache.
+qupath-core-processing:publishToMavenLocal - Publishes all Maven publications produced by this project to the local Maven cache.
+qupath-extension-bioformats:publishToMavenLocal - Publishes all Maven publications produced by this project to the local Maven cache.
+qupath-extension-openslide:publishToMavenLocal - Publishes all Maven publications produced by this project to the local Maven cache.
+qupath-extension-processing:publishToMavenLocal - Publishes all Maven publications produced by this project to the local Maven cache.
+qupath-extension-script-editor:publishToMavenLocal - Publishes all Maven publications produced by this project to the local Maven cache.
+qupath-extension-svg:publishToMavenLocal - Publishes all Maven publications produced by this project to the local Maven cache.
+qupath-gui-fx:publishToMavenLocal - Publishes all Maven publications produced by this project to the local Maven cache.
+
+QuPath tasks
+------------
+exportDocs - Export icons and command descriptions for documentation
+
+Reporting tasks
+---------------
+generateLicenseReport - Generates license report for all dependencies of this project and its subprojects
+
+Verification tasks
+------------------
+check - Runs all checks.
+qupath-app:check - Runs all checks.
+qupath-core:check - Runs all checks.
+qupath-core-processing:check - Runs all checks.
+qupath-extension-bioformats:check - Runs all checks.
+qupath-extension-openslide:check - Runs all checks.
+qupath-extension-processing:check - Runs all checks.
+qupath-extension-script-editor:check - Runs all checks.
+qupath-extension-svg:check - Runs all checks.
+qupath-gui-fx:check - Runs all checks.
+jacocoTestCoverageVerification - Verifies code coverage metrics based on specified rules for the test task.
+qupath-app:jacocoTestCoverageVerification - Verifies code coverage metrics based on specified rules for the test task.
+qupath-core:jacocoTestCoverageVerification - Verifies code coverage metrics based on specified rules for the test task.
+qupath-core-processing:jacocoTestCoverageVerification - Verifies code coverage metrics based on specified rules for the test task.
+qupath-extension-bioformats:jacocoTestCoverageVerification - Verifies code coverage metrics based on specified rules for the test task.
+qupath-extension-openslide:jacocoTestCoverageVerification - Verifies code coverage metrics based on specified rules for the test task.
+qupath-extension-processing:jacocoTestCoverageVerification - Verifies code coverage metrics based on specified rules for the test task.
+qupath-extension-script-editor:jacocoTestCoverageVerification - Verifies code coverage metrics based on specified rules for the test task.
+qupath-extension-svg:jacocoTestCoverageVerification - Verifies code coverage metrics based on specified rules for the test task.
+qupath-gui-fx:jacocoTestCoverageVerification - Verifies code coverage metrics based on specified rules for the test task.
+jacocoTestReport - Generates code coverage report for the test task.
+qupath-app:jacocoTestReport - Generates code coverage report for the test task.
+qupath-core:jacocoTestReport - Generates code coverage report for the test task.
+qupath-core-processing:jacocoTestReport - Generates code coverage report for the test task.
+qupath-extension-bioformats:jacocoTestReport - Generates code coverage report for the test task.
+qupath-extension-openslide:jacocoTestReport - Generates code coverage report for the test task.
+qupath-extension-processing:jacocoTestReport - Generates code coverage report for the test task.
+qupath-extension-script-editor:jacocoTestReport - Generates code coverage report for the test task.
+qupath-extension-svg:jacocoTestReport - Generates code coverage report for the test task.
+qupath-gui-fx:jacocoTestReport - Generates code coverage report for the test task.
+test - Runs the test suite.
+qupath-app:test - Runs the test suite.
+qupath-core:test - Runs the test suite.
+qupath-core-processing:test - Runs the test suite.
+qupath-extension-bioformats:test - Runs the test suite.
+qupath-extension-openslide:test - Runs the test suite.
+qupath-extension-processing:test - Runs the test suite.
+qupath-extension-script-editor:test - Runs the test suite.
+qupath-extension-svg:test - Runs the test suite.
+qupath-gui-fx:test - Runs the test suite.
+
+Other tasks
+-----------
+compileJava - Compiles main Java source.
+qupath-app:compileJava - Compiles main Java source.
+qupath-core:compileJava - Compiles main Java source.
+qupath-core-processing:compileJava - Compiles main Java source.
+qupath-extension-bioformats:compileJava - Compiles main Java source.
+qupath-extension-openslide:compileJava - Compiles main Java source.
+qupath-extension-processing:compileJava - Compiles main Java source.
+qupath-extension-script-editor:compileJava - Compiles main Java source.
+qupath-extension-svg:compileJava - Compiles main Java source.
+qupath-gui-fx:compileJava - Compiles main Java source.
+compileTestJava - Compiles test Java source.
+qupath-app:compileTestJava - Compiles test Java source.
+qupath-core:compileTestJava - Compiles test Java source.
+qupath-core-processing:compileTestJava - Compiles test Java source.
+qupath-extension-bioformats:compileTestJava - Compiles test Java source.
+qupath-extension-openslide:compileTestJava - Compiles test Java source.
+qupath-extension-processing:compileTestJava - Compiles test Java source.
+qupath-extension-script-editor:compileTestJava - Compiles test Java source.
+qupath-extension-svg:compileTestJava - Compiles test Java source.
+qupath-gui-fx:compileTestJava - Compiles test Java source.
+components - Displays the components produced by root project 'qupath'. [deprecated]
+qupath-app:components - Displays the components produced by project ':qupath-app'. [deprecated]
+qupath-core:components - Displays the components produced by project ':qupath-core'. [deprecated]
+qupath-core-processing:components - Displays the components produced by project ':qupath-core-processing'. [deprecated]
+qupath-extension-bioformats:components - Displays the components produced by project ':qupath-extension-bioformats'. [deprecated]
+qupath-extension-openslide:components - Displays the components produced by project ':qupath-extension-openslide'. [deprecated]
+qupath-extension-processing:components - Displays the components produced by project ':qupath-extension-processing'. [deprecated]
+qupath-extension-script-editor:components - Displays the components produced by project ':qupath-extension-script-editor'. [deprecated]
+qupath-extension-svg:components - Displays the components produced by project ':qupath-extension-svg'. [deprecated]
+qupath-gui-fx:components - Displays the components produced by project ':qupath-gui-fx'. [deprecated]
+createChecksums
+dependentComponents - Displays the dependent components of components in root project 'qupath'. [deprecated]
+qupath-app:dependentComponents - Displays the dependent components of components in project ':qupath-app'. [deprecated]
+qupath-core:dependentComponents - Displays the dependent components of components in project ':qupath-core'. [deprecated]
+qupath-core-processing:dependentComponents - Displays the dependent components of components in project ':qupath-core-processing'. [deprecated]
+qupath-extension-bioformats:dependentComponents - Displays the dependent components of components in project ':qupath-extension-bioformats'. [deprecated]
+qupath-extension-openslide:dependentComponents - Displays the dependent components of components in project ':qupath-extension-openslide'. [deprecated]
+qupath-extension-processing:dependentComponents - Displays the dependent components of components in project ':qupath-extension-processing'. [deprecated]
+qupath-extension-script-editor:dependentComponents - Displays the dependent components of components in project ':qupath-extension-script-editor'. [deprecated]
+qupath-extension-svg:dependentComponents - Displays the dependent components of components in project ':qupath-extension-svg'. [deprecated]
+qupath-gui-fx:dependentComponents - Displays the dependent components of components in project ':qupath-gui-fx'. [deprecated]
+jpackageFinalize
+model - Displays the configuration model of root project 'qupath'. [deprecated]
+qupath-app:model - Displays the configuration model of project ':qupath-app'. [deprecated]
+qupath-core:model - Displays the configuration model of project ':qupath-core'. [deprecated]
+qupath-core-processing:model - Displays the configuration model of project ':qupath-core-processing'. [deprecated]
+qupath-extension-bioformats:model - Displays the configuration model of project ':qupath-extension-bioformats'. [deprecated]
+qupath-extension-openslide:model - Displays the configuration model of project ':qupath-extension-openslide'. [deprecated]
+qupath-extension-processing:model - Displays the configuration model of project ':qupath-extension-processing'. [deprecated]
+qupath-extension-script-editor:model - Displays the configuration model of project ':qupath-extension-script-editor'. [deprecated]
+qupath-extension-svg:model - Displays the configuration model of project ':qupath-extension-svg'. [deprecated]
+qupath-gui-fx:model - Displays the configuration model of project ':qupath-gui-fx'. [deprecated]
+prepareKotlinBuildScriptModel
+processResources - Processes main resources.
+qupath-app:processResources - Processes main resources.
+qupath-core:processResources - Processes main resources.
+qupath-core-processing:processResources - Processes main resources.
+qupath-extension-bioformats:processResources - Processes main resources.
+qupath-extension-openslide:processResources - Processes main resources.
+qupath-extension-processing:processResources - Processes main resources.
+qupath-extension-script-editor:processResources - Processes main resources.
+qupath-extension-svg:processResources - Processes main resources.
+qupath-gui-fx:processResources - Processes main resources.
+processTestResources - Processes test resources.
+qupath-app:processTestResources - Processes test resources.
+qupath-core:processTestResources - Processes test resources.
+qupath-core-processing:processTestResources - Processes test resources.
+qupath-extension-bioformats:processTestResources - Processes test resources.
+qupath-extension-openslide:processTestResources - Processes test resources.
+qupath-extension-processing:processTestResources - Processes test resources.
+qupath-extension-script-editor:processTestResources - Processes test resources.
+qupath-extension-svg:processTestResources - Processes test resources.
+qupath-gui-fx:processTestResources - Processes test resources.
+startScripts - Creates OS specific scripts to run the project as a JVM application.
+
+Rules
+-----
+Pattern: clean<TaskName>: Cleans the output files of a task.
+Pattern: build<ConfigurationName>: Assembles the artifacts of a configuration.

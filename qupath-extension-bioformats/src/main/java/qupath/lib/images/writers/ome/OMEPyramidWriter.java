@@ -20,7 +20,7 @@
  */
 
 package qupath.lib.images.writers.ome;
-
+import static java.lang.System.out;
 import java.awt.image.BufferedImage;
 import java.awt.image.WritableRaster;
 import java.io.File;
@@ -699,6 +699,7 @@ public class OMEPyramidWriter {
 				int w = width;
 				int h = height;
 				if (meta instanceof IPyramidStore && level > 0) {
+					// WM level or downsamples?
 					w = ((IPyramidStore)meta).getResolutionSizeX(series, level).getValue().intValue();
 					h = ((IPyramidStore)meta).getResolutionSizeY(series, level).getValue().intValue();
 				}
@@ -726,8 +727,8 @@ public class OMEPyramidWriter {
 								h == server.getMetadata().getLevel(levelTemp).getHeight() &&
 								tileWidth == server.getMetadata().getPreferredTileWidth() && tileHeight == server.getMetadata().getPreferredTileHeight()) {
 							
-							logger.debug("Using tile requests directly for level {}", level);
-							logger.trace("Tiled level: {} ({})", level, server.getMetadata().getLevel(level));
+							logger.error("WM Using tile requests directly for level {}", level);// debug
+							logger.error("WM Tiled level: {} ({})", level, server.getMetadata().getLevel(level));// trace
 							int thisZ = z;
 							int thisT = t;
 							server.getTileRequestManager()
@@ -737,12 +738,24 @@ public class OMEPyramidWriter {
 								.forEachOrdered(tiles::add);
 						} else {
 							// Create new tile requests
-							for (int yy = 0; yy < h; yy += tileHeight) {
-								int hh = Math.min(h - yy, tileHeight);
-								for (int xx = 0; xx < w; xx += tileWidth) {
-									int ww = Math.min(w - xx, tileWidth);
-									var region = ImageRegion.createInstance(xx, yy, ww, hh, z, t);
-									tiles.add(TileRequest.createInstance(server.getPath(), level, d, region));
+							// I need to have tiles size tileHeight*d because they will be rescaled
+							// The top left corner of each tile is in original resolution, so if I want tileHeight-sized tiles 
+							// after rescaling, they have to be enlarged by a factor of d beforehand
+							for (int yy = 0; yy < h; yy += tileHeight*d) {
+								int hh = Math.min(h - yy, (int)Math.round(tileHeight*d));
+								for (int xx = 0; xx < w; xx += tileWidth*d) {
+									logger.error("BEGIN of tile request generation");
+									logger.error("WM Working with tilewidth/tileheight {} {}", tileWidth*d, tileHeight*d);// debug
+									logger.error("WM Creating tile requests for {} {}", xx, yy);// debug
+									int ww = Math.min(w - xx, (int)Math.round(tileWidth*d));
+									logger.error("WM effective Width: {} Height: {}", ww/d,hh/d);// debug
+									// somewhere the scale factor is applied using a multiplication. So here we have to divide beforehand
+									var region = ImageRegion.createInstance(xx, yy, (int)Math.round(ww/d), (int)Math.round(hh/d), z, t);
+
+									var tileRequest = TileRequest.createInstance(server.getPath(), level, d, region);
+									logger.error(tileRequest.toShortString());
+									tiles.add(tileRequest);
+									logger.error("END of tile request generation");
 								}
 							}
 						}
@@ -782,7 +795,7 @@ public class OMEPyramidWriter {
 								// Do this for channels and levels, since we sometimes need to request the same tiles when exporting 
 								// at a lower resolution
 								if (ci > 0 || level > 0) {
-									logger.trace("Reversing list if {} regions", tiles.size());
+									logger.trace("Reversing list of {} regions", tiles.size());
 									Collections.reverse(tiles);
 								}
 								
@@ -793,11 +806,15 @@ public class OMEPyramidWriter {
 										try {
 											if (Thread.currentThread().isInterrupted())
 												return;
+											// this is called when writing:
+											System.out.println("WMWM before writing");
+											System.out.println(tile.toShortString());
 											writeRegion(localWriter, plane, ifd, server, tile, isRGB, localChannels);
+											System.out.println("WMWM AFTER writing");
 										} catch (Exception e) {
 											logger.error(String.format(
-													"Error writing %s (downsample=%.2f)",
-													tile.toString(), d),
+													"WM Error writing %s (downsample=%.2f)",
+													tile.toShortString(), d),
 													e);
 										} finally {
 											int localCount = count.incrementAndGet();
@@ -881,9 +898,13 @@ public class OMEPyramidWriter {
 		 */
 		private void writeRegion(IFormatWriter writer, int plane, IFD ifd, ImageServer<BufferedImage> server, TileRequest tile, boolean isRGB, int[] channels) throws FormatException, IOException {
 			
+			System.out.println("WM TILE REQUEST   writeRegion "+ tile.toShortString());
+			//System.out.println("WM REGION REQUEST writeRegion "+ tile.getRegionRequest().toString());
 			// Get the region request - and make sure to translate it to the origin
 			RegionRequest request = tile.getRegionRequest().translate(this.x, this.y);
+			//System.out.println("WM REGION TRANSLATED writeRegion "+ request.toString());
 			BufferedImage img = server.readRegion(request);
+			System.out.println("Properly read region");
 			
 			var pixelType = getExportPixelType();
 			int bytesPerPixel = pixelType.getBytesPerPixel();
@@ -897,10 +918,9 @@ public class OMEPyramidWriter {
 				return;
 			}
 			
-			int ww = img.getWidth();
-			int hh = img.getHeight();
-			ByteBuffer buf = ByteBuffer.allocate(ww * hh * bytesPerPixel * nChannels)
-					.order(endian);
+			int ww = img.getWidth(); 
+			int hh = img.getHeight(); 
+			ByteBuffer buf = ByteBuffer.allocate(ww * hh * bytesPerPixel * nChannels) .order(endian);
 			
 			if (isRGB) {
 				Object pixelBuffer = getPixelBuffer(ww*hh, pixelType);
@@ -919,9 +939,24 @@ public class OMEPyramidWriter {
 					channelToBuffer(img.getRaster(), c, buf, ind, channels.length * bytesPerPixel, pixelType);
 				}
 			}
-			if (writer instanceof TiffWriter)
+			
+			if (writer instanceof TiffWriter){
+				// WM this is called when writing tiles
+				// here probably false sizes
+				//System.out.println("IFDIFD %s"+ifd.toString());
+				System.out.print("Writing tile with TiffWriter: w/h: ");
+				System.out.print(ww);
+				System.out.print("/");
+				System.out.println(hh);
+				System.out.print("  ");
+				System.out.print(tile.getTileX());
+				System.out.print(" ,  ");
+				System.out.print(tile.getTileY());
+				System.out.print(" size" + buf.array().length);
+				System.out.println();
+				
 				((TiffWriter)writer).saveBytes(plane, buf.array(), ifd, tile.getTileX(), tile.getTileY(), ww, hh);
-			else
+			}else
 				writer.saveBytes(plane, buf.array(), tile.getTileX(), tile.getTileY(), ww, hh);
 		}
 		

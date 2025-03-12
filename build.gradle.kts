@@ -1,6 +1,7 @@
+import java.net.URI
 import io.github.qupath.gradle.PlatformPlugin
 import org.apache.tools.ant.taskdefs.condition.Os
-
+import org.gradle.vcs.*
 plugins {
     id("qupath.common-conventions")
     id("qupath.javafx-conventions")
