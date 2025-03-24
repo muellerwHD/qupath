@@ -139,16 +139,19 @@ public class TileRequest {
 				);
 	}
 	
-
+  // get me an orignally-sized region
+  // the downsample factor gets stored
 	private static RegionRequest getRegionRequest(String path, double downsample, ImageRegion tileRegion) {
+
+    // we multiply by downsample to get the original sizes
 		double x1 = tileRegion.getX() * downsample;
 		double y1 = tileRegion.getY() * downsample;
 		double x2 = (tileRegion.getX() + tileRegion.getWidth()) * downsample;
 		double y2 = (tileRegion.getY() + tileRegion.getHeight()) * downsample;
-		System.out.println("WMGRegionRequest: x1:" + x1);
-		System.out.println("WMGRegionRequest: y1:" + y1);
-		System.out.println("WMGRegionRequest: x2:" + x2);
-		System.out.println("WMGRegionRequest: y2:" + y2);
+
+		System.out.println("WMGRegionRequest: x1,y1:" + x1 + "/" + y1 + "   " + x2 + "/" + y2 + " downsample=" + downsample);
+    // FIXME well, where is the downsample???
+
 		return RegionRequest.createInstance(path, downsample,
 				(int)Math.round(x1),
 				(int)Math.round(y1),
@@ -328,7 +331,7 @@ public class TileRequest {
 				tileRegion.getX(), tileRegion.getY(), tileRegion.getWidth(), tileRegion.getHeight(), request.toString());
 	}
 	public String toShortString() {
-		return String.format("WM Short Tile: level=%d, bounds=(%d, %d, %d, %d)", level,
+		    return String.format("WM Short Tile: level=%d, bounds=(%d, %d, %d, %d)", level,
 				tileRegion.getX(), tileRegion.getY(), tileRegion.getWidth(), tileRegion.getHeight());
 	}
 	

@@ -61,7 +61,7 @@ public class RegionRequest extends ImageRegion {
 	@Override
 	public String toString() {
 		String prefix = path;
-		return prefix + ": x=" + getX() + ", y=" + getY() + ", w=" + getWidth() + ", h=" + getHeight() + ", z=" + getZ() + ", t=" + getT() + ", downsample=" + df.format(downsample);
+		return "{PREFIX" + prefix + "/PREFIX}" + ": x=" + getX() + ", y=" + getY() + ", w=" + getWidth() + ", h=" + getHeight() + ", z=" + getZ() + ", t=" + getT() + ", downsample=" + df.format(downsample);
 	}
 	
 	
