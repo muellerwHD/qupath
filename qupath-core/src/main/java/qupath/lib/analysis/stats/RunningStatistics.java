@@ -68,7 +68,39 @@ public class RunningStatistics {
 	public long size() {
 		return size;
 	}
-	
+
+    public static String getCallerInfo() {
+        // Get the current stack trace
+        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
+
+        // The first element is the current method (getCallerInfo)
+        // The second element is the caller of the current method (methodA in this case)
+        if (stackTrace.length > 2) {
+            StackTraceElement caller = stackTrace[2];
+            String className = caller.getClassName();
+            String methodName = caller.getMethodName();
+            int lineNumber = caller.getLineNumber();
+
+            return className + "." + methodName + ":" + lineNumber;
+        } else {
+            return "Unable to determine caller information.";
+        }
+    }
+    public static String getFullStackTrace() {
+        // Get the current stack trace
+        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
+
+        // StringBuilder to accumulate the stack trace as a string
+        StringBuilder sb = new StringBuilder();
+
+        // Iterate over the stack trace elements and append them to the StringBuilder
+        for (StackTraceElement element : stackTrace) {
+            sb.append(element.toString()).append("\n");
+        }
+
+        return sb.toString();
+    }
+    static long hugeCount=0;
 	/**
 	 * Add another value; NaN values are counted but do not contribute to the statistics.
 	 * 
@@ -77,6 +109,14 @@ public class RunningStatistics {
 	 * @see #getNumNaNs()
 	 */
 	public void addValue(double val) {
+	    if(val > 60000){
+		hugeCount++;
+		String callerInfo = getFullStackTrace();
+		System.out.println(callerInfo + "Huge value no.: hugeCount=" + hugeCount + " detected: val=" + val);
+	    }
+
+
+	    
 		if (Double.isNaN(val)) {
 			numNaNs++;
 			return;
@@ -114,8 +154,9 @@ public class RunningStatistics {
 	 * @return
 	 */
 	public double getSum() {
-		if (Math.abs(sum) > LARGE_DOUBLE_THRESHOLD)
-			logger.warn("Sum in {} is particularly large ({}), beware imprecision!", getClass().getSimpleName(), sum);
+	    if (Math.abs(sum) > LARGE_DOUBLE_THRESHOLD){
+			logger.warn("Sum in {} is particularly large ({}), beware imprecision!",getFullStackTrace(), sum);
+	    }
 		return sum;
 	}
 	
@@ -132,8 +173,9 @@ public class RunningStatistics {
 	 * @return
 	 */
 	public double getVariance() {
-		if (Math.abs(s1) > LARGE_DOUBLE_THRESHOLD)
-			logger.warn("Variance parameter s1 in {} is particularly large ({}), beware imprecision!", getClass().getSimpleName(), sum);
+	    if (Math.abs(s1) > LARGE_DOUBLE_THRESHOLD){
+		logger.warn("Variance parameter s1 in {} is particularly large ({}), beware imprecision!", getFullStackTrace(), sum);
+	    }
 		return (size <= 1) ? Double.NaN : s1 / (size - 1);
 	}
 	
